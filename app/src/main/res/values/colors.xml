@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="PrimaryBlue">#00a3ff</color>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#000</color>
+    <color name="themeColor">#000</color>
+
+    <!--normal colors-->
+
+    <color name="darkTextColor">#020000</color>
+
+
+    <!--colors for light mode-->
+    <color name="contentTextColor">#020000</color>
+
+    <color name="register_bk_color">#000</color>
+    <color name="login_bk_color">#fff</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#00a3ff</color>
+    <color name="background_toolbar">#fff</color>
+    <color name="background_tabColor">#fff</color>
+    <color name="tabTextColor">#1da1f3</color>
+    <color name="tabIndicatorColor">#000</color>
+    <color name="transparentColour">#00000000</color>
+    <color name="Blue">#3A9DEC</color>
+    <color name="lineColor">#CFCACA</color>
+    <color name="BlueDeFrance">#318CE7</color>
+    <color name="lightBlack">#777777</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <!--new-->
+    <color name="neomorph_background_color">#F1F3F6</color>
+    <color name="neomorph_shadow_color">#D9DBDE</color>
+    <color name="neomorph_highlight_color">#FFFFFF</color>
+    <color name="shadowColor">#000</color>
+
+    <!--shimmer-->
+    <color name="colorShimmer">#E4E2E2</color>
+    <color name="colorBackground">#fff</color>
+    <color name="video_player_bg">#22000000</color>
+    <color name="black_trans">#B4000000</color>
+
+    <color name="silver">#b1b1b1</color>
+    <color name="card_bg">#dddddd</color>
+    <color name="lightGrey">#707070</color>
+    <color name="orange">#ff9d00</color>
+    <color name="light_Grey_post_bg">#cbcbcb</color>
+    <color name="light_like_post_bg">#f5f5f5</color>
+    <color name="red">#FF0000</color>
+    <color name="shine_black">#464648</color>
+    <color name="TimeColor">#CBCBCB</color>
+
+    <color name="light_black">#4E4E60</color>
+
+
+</resources>

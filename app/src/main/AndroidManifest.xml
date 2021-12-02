@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sconti.studentcontinent">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <application
+        android:name=".ContinentApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/equilogo2"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.AddPostToOtherApp"></activity>
+        <activity android:name=".activity.appinfo.AppInfoActivity" />
+
+        <receiver android:name=".activity.newlogin.OTP_Receiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.VideoImageActivity" />
+        <activity android:name=".activity.profile.ui.main.ViewImageActivity" />
+        <activity
+            android:name=".activity.commentdetails.PostSubCommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.profile.UserProfileSearchActivity"
+            android:label="User List"
+            android:parentActivityName=".activity.alltabs.SecondMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.profile.editProfile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.profile.FollowersListShowActivity"
+            android:label="@string/title_activity_followers_list_show"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- <activity -->
+        <!-- android:name=".activity.profile.ShowFolloweList" -->
+        <!-- android:label="@string/title_activity_show_followe_list" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+        <activity
+            android:name=".activity.LikedUserListActivity"
+            android:label="Likes"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.YouTubePlayer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.trending.TrendingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.newlogin.NewLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".activity.othersprofile.OthersProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".customview.CustomVideoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.starterscreen.CollegeSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <service
+            android:name=".backendServices.BackgroundService"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".activity.outdoor.EditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.profile.ProfileFragment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.starterscreen.WhatYouWantActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.newlogin.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.newlogin.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.starterscreen.StarterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.getcategories.GetCategoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.alltabs.SecondMainActivity"
+            android:label="@string/title_activity_second_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme" >
+
+        </activity>
+        <activity
+            android:name=".activity.post.PostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+
+           <!-- <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:host="www.youtube.com" android:mimeType="text/*" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".authentication.firebase.FirebaseLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".authentication.firebase.FirebaseSignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.commentdetails.CommentDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <service
+            android:name=".services.FirebaseIntentService"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.details.DetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.knowledge.KnowledgeBottomNavActivity"
+            android:label="@string/title_activity_knowledge_bottom_nav"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.knowledge.KnowledgeTabActivity"
+            android:label="@string/title_activity_game_tab"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.games.GamesTabActivity"
+            android:label="@string/title_activity_game_tab"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.aspiration.AspirationTabActivity"
+            android:label="@string/title_activity_game_tab"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.outdoor.OutDoorTabActivity"
+            android:label="@string/title_activity_game_tab"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.KnowledgeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AspirationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OutdoorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".services.VideoPreLoadingService" />
+    </application>
+
+</manifest>

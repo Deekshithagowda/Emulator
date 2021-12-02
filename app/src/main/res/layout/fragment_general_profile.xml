@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".activity.profile.GeneralProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="bottom|end"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="25dp"
+                    android:textSize="20sp"
+                    android:text="@string/details" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="95dp"
+                    android:background="@color/lightGrey" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="bottom|right"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/EditProfile"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/box2"
+                    android:backgroundTint="@color/PrimaryBlue"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    tools:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="9"
+        android:layout_height="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/degree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/degree"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewSelectedDegree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_below="@+id/degree"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:text="Computer Science" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_below="@+id/textViewSelectedDegree"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/lightGrey" />
+
+
+            <TextView
+                android:id="@+id/collage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_below="@+id/line1"
+                android:text="@string/collage"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewSelectedCollage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_below="@+id/collage"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:text="National Collage" />
+
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/textViewSelectedCollage"
+                android:layout_marginEnd="15dp"
+                android:background="@color/lightGrey" />
+
+            <TextView
+                android:id="@+id/aspiration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/line2"
+                android:padding="5dp"
+                android:text="@string/aspiration"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewSelectedAspirant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_below="@+id/aspiration"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:text="Civil Service Exam" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/Liner_login_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:ignore="Suspicious0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/HeadLine_login_page"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/login"
+                android:textColor="@color/lightGrey" />
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:gravity="center" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/lightGrey"
+                android:fontFamily="@font/roboto"
+                android:text="@string/mobile_number"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/network_of_young_minds"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/logo"
+                android:visibility="gone" />
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                android:id="@+id/textInputEmail"-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginStart="32dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginEnd="32dp">-->
+
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/editTextEmail"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:background="@drawable/ic_text_background"-->
+            <!--                    android:hint="@string/enter_phone"-->
+            <!--                    android:inputType="phone"-->
+            <!--                    android:maxLines="1"-->
+            <!--                    android:paddingStart="25dp"-->
+            <!--                    tools:ignore="RtlSymmetry" />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/ic_rectangle_phone_number"
+                android:backgroundTint="@null"
+                android:hint="@string/enter_phone"
+                android:textColor="@color/lightGrey"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:paddingStart="25dp"
+                tools:ignore="RtlSymmetry,TextFields" />
+
+
+
+
+
+            <!--            <com.chaos.view.PinView-->
+            <!--                android:id="@+id/editTextOTP"-->
+            <!--                style="@style/PinWidget.PinView"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:cursorVisible="true"-->
+            <!--                android:inputType="number"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                app:itemCount="6"-->
+            <!--                app:itemHeight="50dp"-->
+            <!--                app:itemRadius="25dp"-->
+            <!--                app:itemSpacing="10dp"-->
+            <!--                app:itemWidth="50dp"-->
+            <!--                android:visibility="gone"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:lineWidth="1dp" />-->
+
+
+            <!--                    <com.google.android.material.textfield.TextInputLayout-->
+            <!--                        android:id="@+id/textInpuOTP"-->
+            <!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="32dp"-->
+            <!--                        android:layout_marginTop="@dimen/loginViewsMargin"-->
+            <!--                        android:layout_marginEnd="32dp"-->
+            <!--                        android:visibility="gone">-->
+
+            <!--                        <com.google.android.material.textfield.TextInputEditText-->
+            <!--                            android:id="@+id/editTextOTP"-->
+            <!--                            style="@style/modifiedEditText"-->
+            <!--                            android:hint="@string/enter_otp"-->
+            <!--                            android:inputType="phone"-->
+            <!--                            android:maxLines="1" />-->
+            <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                android:id="@+id/textInputName"-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="32dp"-->
+            <!--                android:layout_marginTop="@dimen/loginViewsMargin"-->
+            <!--                android:layout_marginEnd="32dp"-->
+            <!--                android:visibility="gone">-->
+
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/editTextName"-->
+            <!--                    style="@style/modifiedEditText"-->
+            <!--                    android:hint="@string/enter_name"-->
+            <!--                    android:inputType="textCapWords"-->
+            <!--                    android:maxLines="1" />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+
+
+                    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                        android:id="@+id/cirLoginButton"
+                        style="@style/loginButton"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:text="@string/login"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:initialCornerAngle="27dp"
+                        app:spinning_bar_color="@color/white"
+                        app:spinning_bar_padding="6dp"
+                        app:spinning_bar_width="4dp" />
+
+
+                <TextView
+                    android:id="@+id/privacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="@string/by_continuing_you_agree_to_equi_terms_and_conditions_and_privacy_policy"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="12sp" />
+
+
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="20dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

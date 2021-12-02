@@ -1,0 +1,108 @@
+package com.sconti.studentcontinent.utils.tools;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerFullScreenListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils.YouTubePlayerTracker;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
+
+public class CustomPlayerUiController extends AbstractYouTubePlayerListener implements YouTubePlayerFullScreenListener {
+
+
+    private Context context;
+    private YouTubePlayer youTubePlayer;
+    private YouTubePlayerView youTubePlayerView;
+    private View panel;
+    private View progressbar;
+    private TextView videoCurrentTimeTextView;
+    private TextView videoDurationTextView;
+
+    private final YouTubePlayerTracker playerTracker;
+    private boolean fullscreen = false;
+
+    public CustomPlayerUiController(Context context, YouTubePlayer youTubePlayer, YouTubePlayerView youTubePlayerView) {
+        this.context = context;
+        this.youTubePlayer = youTubePlayer;
+        this.youTubePlayerView = youTubePlayerView;
+
+        playerTracker = new YouTubePlayerTracker();
+        youTubePlayer.addListener(playerTracker);
+
+    }
+
+
+    @Override
+    public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+        // progressbar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onStateChange(@NonNull YouTubePlayer youTubePlayer, @NonNull PlayerConstants.PlayerState state) {
+        if(state == PlayerConstants.PlayerState.PLAYING || state == PlayerConstants.PlayerState.PAUSED || state == PlayerConstants.PlayerState.VIDEO_CUED)
+        //  panel.setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent));
+        {
+
+        }
+        else if(state == PlayerConstants.PlayerState.BUFFERING)
+        {
+
+        }
+        //panel.setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent));
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    public void onCurrentSecond(@NonNull YouTubePlayer youTubePlayer, float second) {
+        // videoCurrentTimeTextView.setText(second+"");
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    public void onVideoDuration(@NonNull YouTubePlayer youTubePlayer, float duration) {
+        // videoDurationTextView.setText(duration+"");
+    }
+
+    @Override
+    public void onYouTubePlayerEnterFullScreen() {
+       /* ViewGroup.LayoutParams viewParams = playerUi.getLayoutParams();
+        viewParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
+        viewParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        playerUi.setLayoutParams(viewParams);*/
+    }
+
+    @Override
+    public void onYouTubePlayerExitFullScreen() {
+       /* ViewGroup.LayoutParams viewParams = playerUi.getLayoutParams();
+        viewParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        viewParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        playerUi.setLayoutParams(viewParams);*/
+    }
+
+    public void pause()
+    {
+        if(playerTracker.getState() == PlayerConstants.PlayerState.PLAYING) youTubePlayer.pause();
+        else youTubePlayer.pause();
+        /*if(playerTracker.getState() == PlayerConstants.PlayerState.PLAYING) {
+            youTubePlayer.play();
+
+        }
+      //  else if(playerTracker.getState() == PlayerConstants.PlayerState.PAUSED)
+        {youTubePlayer.play();}//
+        else
+        {
+            youTubePlayer.pause();
+        }*/
+    }
+
+}

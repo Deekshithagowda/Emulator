@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BottomSheetDialogUserDost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|top"
+            android:background="@drawable/ic_line" />
+
+        <TextView
+            android:id="@+id/Report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/report"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/copy_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/copy_link"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/turn_on_post_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/turn_on_post_notification"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/share_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/menu_share"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/edit"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/delete"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/KnowledgePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/continue_post_with_knowledge"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/AspirationPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/continue_post_with_aspiration"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/OutdoorPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="@string/continue_post_with_outdoor"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

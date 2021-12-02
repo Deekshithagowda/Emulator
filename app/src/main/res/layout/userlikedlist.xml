@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageViewLikeList"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_user_profile" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.3"
+        android:gravity="center|left">
+
+        <LinearLayout
+            android:id="@+id/textViewFollowName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/UserLikeListUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0A0B0B"
+                tools:text="EQUI user Name" />
+
+            <TextView
+                android:id="@+id/UserLikeListCollageName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="EQUI user Collage Name" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/FollowerProfileBtn"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minHeight="25dp"
+            android:text="@string/follow"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.3dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@color/lightGrey" />
+
+
+</LinearLayout>

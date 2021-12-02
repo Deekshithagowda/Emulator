@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/card_bg"
+    android:elevation="8dp"
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/UserDataLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/silver"
+                        android:elevation="50dp"
+                        android:innerRadius="0dp"
+                        android:shape="ring"
+                        app:cardBackgroundColor="@color/silver"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:id="@+id/circleImageViewProfile"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/NameANdTimeLinearLayout" />
+                    </androidx.cardview.widget.CardView>
+
+
+                   <!-- <ImageView
+                        android:id="@+id/ShareIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_share_icon"
+                        android:visibility="gone" />-->
+
+<!--
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleShareProfileImage"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_user_profile"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/NameANdTimeLinearLayout" />
+
+-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LinearLayoutShareShow">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/LinearLayoutShareShow">
+
+                        <LinearLayout
+                            android:id="@+id/NameANdTimeLinearLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="10"
+                            android:gravity="center|left"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewContent"
+                            app:layout_constraintEnd_toStartOf="@+id/popup"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/circleImageViewProfile"
+                            app:layout_constraintTop_toTopOf="@+id/popup"
+                            app:layout_constraintVertical_bias="0.0">
+
+                            <LinearLayout
+                                android:id="@+id/UserNameLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!--<TextView
+                                    android:id="@+id/textViewTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/darkTextColor"
+                                    android:background="@color/silver"/>-->
+
+                                <TextView
+                                    android:id="@+id/textViewTitle2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/silver"
+                                    android:textColor="@color/darkTextColor" />
+
+                                <!-- <TextView
+                                     android:id="@+id/SharePostUserName"
+                                     android:layout_width="wrap_content"
+                                     android:visibility="gone"
+                                     android:layout_height="match_parent"
+                                     android:textColor="@color/darkTextColor"
+                                     tools:text="Title" />-->
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/popup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewContent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/NameANdTimeLinearLayout"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.666"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/FollowButton"
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_rectangle_phone_number"
+                                android:backgroundTint="@color/silver"
+                                android:gravity="center"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:minHeight="25dp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/whiteTextColor"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:id="@+id/more_option"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintVertical_bias="0.666"
+                                tools:ignore="NestedWeights">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_menu"
+                                    app:tint="@color/silver" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textViewDateTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/silver" />
+
+
+                    <TextView
+                        android:id="@+id/textViewContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:autoLink="all"
+                        android:background="@color/silver"
+                        android:linksClickable="true"
+                        android:textColor="@color/lightBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:layout_margin="8dp"
+                        app:cardBackgroundColor="@color/silver"
+                        android:background="@color/silver"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+                        </ImageView>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearlayoutLikesCommentShare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/likescommentshare_bg"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearlayoutMedia">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7"
+                            android:background="@color/light_like_post_bg"
+                            android:gravity="center"
+                            tools:ignore="RtlHardcoded">
+
+                            <RelativeLayout
+                                android:id="@+id/like_me"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="top">
+
+                                <xyz.hanks.library.bang.SmallBangView
+                                    android:id="@+id/imageViewAnimation"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="3dp"
+                                    tools:ignore="MissingClass">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:backgroundTint="@color/light_like_post_bg"
+                                        android:src="@drawable/heart_selector"
+                                        app:tint="@color/silver" />
+                                </xyz.hanks.library.bang.SmallBangView>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textViewLikeCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:background="@color/silver"
+                                    android:textColor="@color/silver"
+                                    tools:text="3" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7"
+                            android:gravity="center">
+                            <!-- <androidx.cardview.widget.CardView
+                             android:layout_gravity="center_horizontal"
+                             app:cardElevation="8dp"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">-->
+
+
+                            <LinearLayout
+                                android:id="@+id/linearlayoutComment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_comment"
+                                    app:tint="@color/silver" />
+
+
+                            </LinearLayout>
+                            <!--   </androidx.cardview.widget.CardView>-->
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textViewCommentCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:background="@color/silver"
+                                    android:textColor="@color/silver"
+                                    tools:text="3" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="2.7"
+                            android:gravity="center">
+                            <!--<androidx.cardview.widget.CardView
+                            android:layout_gravity="center_horizontal"
+                            app:cardElevation="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">-->
+
+                            <LinearLayout
+                                android:id="@+id/linearlayoutShare"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_share_icon"
+                                    app:tint="@color/silver" />
+
+
+                            </LinearLayout>
+                            <!-- </androidx.cardview.widget.CardView>-->
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textViewShareCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:background="@color/silver"
+                                    android:textColor="@color/silver"
+                                    tools:text="3" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/light_Grey_post_bg"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearlayoutLikesCommentShare">
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

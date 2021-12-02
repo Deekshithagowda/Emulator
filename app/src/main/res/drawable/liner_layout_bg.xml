@@ -1,0 +1,11 @@
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid
+        android:color="@color/background_tabColor">
+    </solid>
+    <corners
+        android:topLeftRadius="35dip"
+        android:topRightRadius="35dip">
+    </corners>
+</shape>

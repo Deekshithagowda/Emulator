@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/Liner_login_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:ignore="Suspicious0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/HeadLine_login_page"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/OTP"
+                android:textColor="@color/lightGrey" />
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:gravity="center" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_weight="8"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="6.5"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/InputCode1"
+                            android:layout_width="50dp"
+                            android:textSize="20sp"
+                            tools:text="1"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:importantForAutofill="no"
+                            android:imeOptions="actionDone"
+                            android:background="@drawable/oval"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/InputCode2"
+                            android:layout_width="50dp"
+                            android:textSize="20sp"
+                            tools:text="1"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:maxLength="1"
+                            android:background="@drawable/oval"
+                            android:gravity="center"
+                            android:importantForAutofill="no"
+                            android:textColor="@color/black"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/InputCode3"
+                            android:layout_width="50dp"
+                            android:textSize="20sp"
+                            tools:text="1"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:maxLength="1"
+                            android:background="@drawable/oval"
+                            android:gravity="center"
+                            android:importantForAutofill="no"
+                            android:textColor="@color/black"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/InputCode4"
+                            android:layout_width="50dp"
+                            android:textSize="20sp"
+                            tools:text="1"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:imeOptions="actionDone"
+                            android:background="@drawable/oval"
+                            android:gravity="center"
+                            android:importantForAutofill="no"
+                            android:textColor="@color/black"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/InputCode5"
+                            android:layout_width="50dp"
+                            android:textSize="20sp"
+                            tools:text="1"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:background="@drawable/oval"
+                            android:importantForAutofill="no"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/InputCode6"
+                            android:layout_width="50dp"
+                            android:textSize="20sp"
+                            tools:text="1"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:maxLength="1"
+                            android:importantForAutofill="no"
+                            android:background="@drawable/oval"
+                            android:gravity="center"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/resendOtpLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center|top"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/resend_otp_in"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/OtpTime"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/PrimaryBlue"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                    android:id="@+id/verifyOtpButton"
+                    style="@style/loginButton"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/verify_otp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:initialCornerAngle="27dp"
+                    app:spinning_bar_color="@color/white"
+                    app:spinning_bar_padding="6dp"
+                    app:spinning_bar_width="4dp" />
+
+                <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                    android:id="@+id/ResendOTPButton"
+                    style="@style/loginButton"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:text="@string/resend_otp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:initialCornerAngle="27dp"
+                    app:spinning_bar_color="@color/white"
+                    app:spinning_bar_padding="6dp"
+                    app:spinning_bar_width="4dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressbarOtp"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="20dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

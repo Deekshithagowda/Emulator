@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/shine_black"
+    android:layout_height="wrap_content">
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+    </ProgressBar>
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/gif_image"
+        android:scaleType="fitXY"
+        android:layout_height="250dp"><!--300-->
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/gif_image"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:text="Cancel"
+            android:layout_weight="1"
+            android:id="@+id/cancel"
+            android:background="@color/shine_black"
+            android:textColor="@color/colorAccent"
+
+            android:layout_height="match_parent">
+        </Button>
+        <Button
+            android:layout_width="match_parent"
+            android:text="OK"
+            android:background="@color/shine_black"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="1"
+            android:id="@+id/ok"
+            android:layout_height="match_parent">
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>

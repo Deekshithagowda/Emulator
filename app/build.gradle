@@ -1,0 +1,147 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.sconti.studentcontinent"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+            ext.alwaysUpdateBuildId = false
+            firebaseCrashlytics {
+
+                mappingFileUploadEnabled false
+            }
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.2'
+    implementation 'androidx.navigation:navigation-ui:2.3.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //ntework library
+    implementation("com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitLibVersion}") {
+        // exclude Retrofit’s OkHttp dependency module and define your own module import
+        exclude module: 'okhttp'
+    }
+    implementation "com.google.code.gson:gson:${rootProject.ext.gsonLibVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitLibVersion}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttpLibVersion}"
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttpLibVersion}"
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleImageLibVer"
+
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    // Add the Firebase SDK for Crashlytics.
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
+
+
+
+
+
+
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
+    implementation "com.squareup.picasso:picasso:$rootProject.picasso"
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.5'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.5'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.5@aar'
+    //comment
+    // implementation 'com.google.android.exoplayer:exoplayer-ui:2.5.4'
+
+    implementation 'com.facebook.android:facebook-login:5.15.3'
+    implementation 'com.facebook.android:facebook-core:5.15.3'
+
+    //implementation 'com.google.firebase:firebase-analytics:18.0.0'
+
+    // implementation 'com.google.firebase:firebase-analytics:17.2.1'
+
+
+    //implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
+    // Add the Firebase Crashlytics dependency.
+    implementation 'br.com.simplepass:loading-button-android:1.14.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.4.0'
+
+    //implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //implementation fileTree(dir: 'libs/youtube', include: '*.jar')
+    // implementation fileTree(dir: 'libs/youtube/libs', include: '*.jar')
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
+    //implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    implementation 'pub.hanks:smallbang:1.2.2'
+    //Test
+    //implementation 'com.commit451:PhotoView:1.2.4'
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+
+    implementation 'com.chaos.view:pinview:1.4.3'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.borjabravo:readmoretextview:2.1.0'
+    implementation 'com.giphy.sdk:ui:2.0.9'
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+}
+repositories {
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    mavenCentral()
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/knowledge_icon"
+        android:title="@string/knowledge" />
+
+    <item
+        android:id="@+id/navigation_aspiration"
+        android:icon="@drawable/aspiration_icon"
+        android:title="@string/aspiration" />
+
+    <item
+        android:id="@+id/navigation_outdoor"
+        android:icon="@drawable/outdoor_icon"
+        android:title="@string/outdoor" />
+
+    <!--    <item-->
+    <!--        android:id="@+id/navigation_new_notification"-->
+    <!--        android:icon="@drawable/ic_notifications_black_24dp"-->
+    <!--        android:title="@string/title_notifications" />-->
+
+    <item
+        android:id="@+id/navigation_trending"
+        android:icon="@drawable/ic_trending"
+        android:title="@string/tending" />
+
+</menu>

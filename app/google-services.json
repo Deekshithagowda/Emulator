@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "269755638441",
+    "project_id": "sconti-e7f3a",
+    "storage_bucket": "sconti-e7f3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269755638441:android:d57de8ab0b4ec1b2d5ffb8",
+        "android_client_info": {
+          "package_name": "com.sconti.studentcontinent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269755638441-vns36m07efgaq30f5iuv3oaf4cmq7l6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa3zif99kE5V0qgP_dYoLpwWOfwv12XbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269755638441-vns36m07efgaq30f5iuv3oaf4cmq7l6h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

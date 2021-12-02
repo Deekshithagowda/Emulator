@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.post.PostActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_path_7114" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/create_post"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="20sp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-50dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/add_post_rectangle"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ProfileInfoLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageViewProfile"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="15dp"
+                            android:src="@drawable/ic_user_profile"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/UserNameAddPost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black"
+                            tools:text="Udaya Raj urs G" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/DetailsLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:layout_below="@+id/ProfileInfoLinearLayout"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="@null"
+                            android:maxLength="1000"
+                            android:hint="@string/enter_desc"
+                            android:textColor="@color/contentTextColor" />
+
+
+
+                        <EditText
+                            android:id="@+id/editTextTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/enter_title"
+                            android:visibility="gone" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/PostImageCardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:visibility="gone"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <ImageView
+                                android:id="@+id/PostImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY" />
+
+                            <ImageView
+                                android:id="@+id/RemoveImageAddPost"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/ic_canacle"
+                                android:visibility="visible"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/PostVideoCardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="400dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:visibility="gone"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp">
+
+                                <VideoView
+                                    android:id="@+id/PostVideo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="400dp"
+                                    android:visibility="visible"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY" />
+                                <ImageView
+                                    android:id="@+id/thumbnail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="400dp"
+                                    android:visibility="visible"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY">
+                                </ImageView>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/RemoveVideoPost"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="right|end"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/ic_canacle"
+                                android:visibility="visible"/>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="@color/lightGrey"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearlayoutLikesCommentShare" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:weightSum="10"
+                        android:layout_below="@+id/DetailsLinearLayout"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight="7"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageViewAttach"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_photo_camera" />
+
+                            <ImageView
+                                android:id="@+id/videoAttach"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_video_camera" />
+
+                            <ImageView
+                                android:id="@+id/gifopen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_gif"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight="3"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/submitButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/postactivitybox"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/post"
+                                android:textAllCaps="false"
+                                android:textColor="@color/whiteTextColor" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_below="@+id/toolbar"-->
+    <!--                android:background="@drawable/liner_layout_bg"-->
+    <!--                android:layout_height="match_parent">-->
+
+
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/linearlayoutEditMessage"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="8dp"-->
+    <!--                android:visibility="visible"-->
+    <!--                android:weightSum="3"-->
+    <!--                android:background="@drawable/add_post_rectangle"-->
+    <!--                android:orientation="vertical"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/toolbar">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:layout_height="wrap_content">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="20dp"-->
+    <!--                    android:layout_marginStart="5dp"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--                        android:id="@+id/imageViewProfile"-->
+    <!--                        android:layout_width="40dp"-->
+    <!--                        android:layout_height="40dp"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:src="@drawable/btsestbgimage"-->
+    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:layout_marginTop="20dp"-->
+    <!--                    android:layout_marginStart="10dp"-->
+    <!--                    android:orientation="vertical">-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/UserNameAddPost"-->
+    <!--                        android:textColor="@color/black"-->
+    <!--                        android:textStyle="bold"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"/>-->
+
+    <!--                    <EditText-->
+    <!--                        android:id="@+id/editTextDetails"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginTop="8dp"-->
+    <!--                        android:background="@null"-->
+    <!--                        android:overScrollMode="always"-->
+    <!--                        android:scrollbarStyle="insideInset"-->
+    <!--                        android:scrollbars="vertical"-->
+    <!--                        android:textColor="@color/contentTextColor"-->
+    <!--                        android:hint="@string/enter_desc" />-->
+
+
+    <!--                    <EditText-->
+    <!--                        android:id="@+id/editTextTitle"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:hint="@string/enter_title"-->
+    <!--                        android:visibility="gone" />-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_marginTop="15dp"-->
+    <!--                        android:layout_marginEnd="10dp"-->
+    <!--                        android:orientation="vertical"-->
+    <!--                        android:layout_height="wrap_content">-->
+
+    <!--                        <androidx.cardview.widget.CardView-->
+    <!--                            android:id="@+id/PostImageCardView"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="400dp"-->
+    <!--                            android:visibility="gone"-->
+    <!--                            app:cardCornerRadius="10dp"-->
+    <!--                            app:cardElevation="2dp">-->
+
+    <!--                            <ImageView-->
+    <!--                                android:id="@+id/PostImage"-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="400dp"-->
+    <!--                                android:adjustViewBounds="true"-->
+    <!--                                android:scaleType="fitXY" />-->
+
+    <!--                            <ImageView-->
+    <!--                                android:id="@+id/RemoveImageAddPost"-->
+    <!--                                android:layout_width="20dp"-->
+    <!--                                android:layout_height="20dp"-->
+    <!--                                android:layout_gravity="end"-->
+    <!--                                android:layout_marginEnd="15dp"-->
+    <!--                                android:visibility="gone"-->
+    <!--                                android:layout_marginTop="15dp"-->
+    <!--                                android:background="@drawable/ic_cancel" />-->
+
+    <!--                        </androidx.cardview.widget.CardView>-->
+
+    <!--                        <androidx.cardview.widget.CardView-->
+    <!--                            android:id="@+id/PostVideoCardView"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="400dp"-->
+    <!--                            android:visibility="gone"-->
+    <!--                            app:cardCornerRadius="10dp"-->
+    <!--                            app:cardElevation="2dp">-->
+
+    <!--                            <VideoView-->
+    <!--                                android:id="@+id/PostVideo"-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="400dp"-->
+    <!--                                android:adjustViewBounds="true"-->
+    <!--                                android:scaleType="fitXY" />-->
+
+    <!--                        </androidx.cardview.widget.CardView>-->
+
+
+    <!--                    </LinearLayout>-->
+
+
+    <!--                </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/addImage"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:layout_marginEnd="10dp"-->
+    <!--                    android:layout_height="wrap_content">-->
+
+    <!--                    &lt;!&ndash;  <Button-->
+    <!--                          android:layout_width="wrap_content"-->
+    <!--                          android:text="@string/delete"-->
+    <!--                          android:id="@+id/delete"-->
+    <!--                          android:gravity="start"-->
+    <!--                          android:layout_marginLeft="10dp"-->
+    <!--                          android:layout_height="wrap_content">-->
+
+    <!--                      </Button>&ndash;&gt;-->
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:gravity="end"-->
+    <!--                        android:orientation="horizontal"-->
+    <!--                        android:layout_height="wrap_content">-->
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/imageViewAttach"-->
+    <!--                            android:layout_width="30dp"-->
+    <!--                            android:layout_height="30dp"-->
+    <!--                            android:layout_margin="8dp"-->
+    <!--                            android:src="@drawable/ic_photo_camera" />-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/videoAttach"-->
+    <!--                            android:layout_width="30dp"-->
+    <!--                            android:layout_height="30dp"-->
+    <!--                            android:layout_margin="8dp"-->
+    <!--                            android:src="@drawable/ic_video_camera" />-->
+
+    <!--                    </LinearLayout>-->
+
+
+    <!--                </LinearLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </RelativeLayout>-->
+
+</LinearLayout>

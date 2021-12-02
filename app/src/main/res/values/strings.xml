@@ -1,0 +1,167 @@
+<resources>
+    <string name="app_name">Student Continent</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="registration">Registration</string>
+    <string name="tell_us_about_you">Tell us about you to serve you better</string>
+    <string name="email">Email</string>
+    <string name="interest">Area of Interest</string>
+    <string name="register">register</string>
+    <string name="name_required">Name Required</string>
+    <string name="phone_correct">Enter 10 digit mobile number</string>
+    <string name="please_select_area">Please select one are of interest</string>
+    <string name="logout">Logout</string>
+    <string name="aspiration">Aspiration</string>
+    <string name="outdoor">Outdoor</string>
+    <string name="title_activity_game_tab">GameTabActivity</string>
+
+    <string name="games">Games</string>
+    <string name="submit">Submit</string>
+    <string name="post">Post</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_desc">Write something here...</string>
+    <string name="title_activity_knowledge_bottom_nav">KnowledgeBottomNavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="write_comment">Add a comment or a reply here ...</string>
+    <string name="facebook_app_id">262819924695498</string>
+    <string name="fb_login_protocol_scheme">fb262819924695498</string>
+    <string name="report">Report</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="mute">Mute</string>
+    <string name="turn_on_post_notification">Turn on Post Notification</string>
+    <string name="title_activity_second_main">SecondMainActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_your_degree">Choose your Graduation</string>
+    <string name="choose_your_college">Enter your Graduation College</string>
+    <string name="get_personalized">Get personalized</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="correct_pwd">Enter Correct password</string>
+    <string name="email_correct">Enter Correct Email</string>
+    <string name="some_thing_wrong">Something wrong</string>
+    <string name="already_registered">User with this ID already registered</string>
+    <string name="no_inetrnet">Check your internet connection</string>
+    <string name="user_not_registered">This user is not registered</string>
+    <string name="what_you_want">What you want to be?</string>
+    <string name="server_client_id">351226695985-v3bq03husagbhfmj4bv2vecp1q1o6vt2.apps.googleusercontent.com</string>
+    <string name="next">Next</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="valid_otp">Enter Valid 6 digit OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="post_deleted_success">Post Deleted Successfully</string>
+    <string name="no_notifications">No Notifications found</string>
+    <string name="profile">Profile</string>
+    <string name="like1">Like</string>
+    <string name="reply">Reply</string>
+    <string name="from">from</string>
+    <string name="enter_phone">Enter Valid Mobile Number</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="update_name">Update Name</string>
+    <string name="your_phone_verified">Your Phone number verified successfully</string>
+    <string name="general_knowledge">General Knowledge</string>
+    <string name="general">General</string>
+    <string name="no_user_data">"No user found "</string>
+    <string-array name="degree">
+        <item>Select one Graduation</item>
+        <item>Bachelor of Arts</item>
+        <item>Bachelor of Commerce</item>
+        <item>Bachelor of Business Management</item>
+        <item>Bachelor of Science</item>
+        <item>Computer Science and Engineering</item>
+    </string-array>
+    <string name="title_activity_show_followe_list">ShowFolloweList</string>
+    <string name="title_activity_followers_list_show">FollowersListShow</string>
+    <string name="like">Like</string>
+    <string name="tab_text_2">Following</string>
+    <string name="tab_text_1">Followers</string>
+    <string name="college_name">collegename</string>
+    <string name="DeleteToast">"<b>Delete</b> " \n\n "Do you want delete this \n Post?"</string>
+    <string name="not_able_to_update">Not able to update post</string>
+    <string name="shared_success">Shared successfully</string>
+    <string name="follow">Follow</string>
+    <string name="chat">Chat</string>
+    <string name="SearchUser" />
+    <string name="search_user">Search user</string>
+    <string name="open_drawer">open</string>
+    <string name="close_drawer">close</string>
+    <string name="tending">Tending</string>
+    <string name="trending">Trending</string>
+    <string name="Reply">Reply</string>
+    <string name="network_of_young_minds">Network of Young Minds</string>
+    <string name="by_continuing_you_agree_to_equi_terms_and_conditions_and_privacy_policy">By continuing you agree to EQUI Terms and Conditions and Privacy Policy</string>
+    <string name="equi">EQUI</string>
+    <string name="login">LOGIN</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="please_choose_your_graduation">Please choose your Graduation</string>
+    <string name="your_graduation_college">Your Graduation College</string>
+    <string name="enter_collage_name">Enter Collage Name</string>
+    <string name="search">Search</string>
+    <string name="notifications">Notifications</string>
+    <string name="More"> More</string>
+    <string name="read_less">… Read less</string>
+    <string name="what_you_want_to_be">What you want to be?</string>
+    <string name="OTP">OTP</string>
+    <string name="resend_otp_in">Resend OTP in</string>
+    <string name="Enter_name">Please Enter User Name</string>
+    <string name="create_post">Create Post</string>
+    <string name="BioData">Bio data</string>
+    <string name="mobile">Mobile</string>
+    <string name="details">Details</string>
+    <string name="degree">Degree</string>
+    <string name="collage">College</string>
+    <string name="Edit_profile">Edit</string>
+
+    <!--alert-->
+
+    <string name="discard_post">Do you want to replace existing Post?</string>
+    <string name="info">info</string>
+    <string name="do_you_want_to_delete">Do you want to Delete?</string>
+    <string name="Uploading">Uploading...</string>
+    <string name="cancel">Cancel</string>
+    <string name="Do_you_want_to_exit">Do you want to exit?</string>
+    <string name="likes">likes</string>
+    <string name="user_s">user\'s</string>
+    <string name="communicate">communicate</string>
+    <string name="comments">Comments</string>
+    <string name="send">Send</string>
+    <string name="sub_comments">Sub comments</string>
+    <string name="knowledge">Knowledge</string>
+    <string name="title_activity_app_info">AppInfoActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="skip">Skip</string>
+    <string name="got_it">Got It</string>
+    <string name="update">Update</string>
+    <string name="college">College</string>
+    <string name="continue_post_with_knowledge">Continue post with Knowledge</string>
+    <string name="continue_post_with_aspiration">Continue post with Aspiration</string>
+    <string name="continue_post_with_outdoor">Continue post with Outdoor</string>
+    <string name="posted">Posted</string>
+</resources>

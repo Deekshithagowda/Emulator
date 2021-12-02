@@ -1,0 +1,13 @@
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid
+        android:color="@color/light_like_post_bg">
+    </solid>
+    <corners
+        android:topLeftRadius="105dip"
+        android:bottomLeftRadius="105dip"
+        android:topRightRadius="105dip"
+        android:bottomRightRadius="105dip">
+    </corners>
+</shape>
